@@ -3,7 +3,7 @@ cask "run-mcp" do
   name "run-mcp"
   desc "A fast, portable, single-binary security scanner for the Model Context Protocol (MCP)."
   homepage "https://github.com/ensigniasec/run-mcp"
-  version "0.0.3"
+  version "0.1.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,29 +13,33 @@ cask "run-mcp" do
 
   on_macos do
     on_intel do
-      url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_x86_64.tar.gz"
-      sha256 "515550f060877ea2eb5cb907742ec8edbc8ae91ae04a707010c46bd89ae04ad9"
+      url "https://github.com/ensigniasec/internal-run-mcp/releases/download/v#{version}/run-mcp_Darwin_x86_64.tar.gz"
+      sha256 "97af4f6498e185378170f31fdb1414d5b17710a48d1800ffe03fcd49b2787524"
     end
     on_arm do
-      url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_arm64.tar.gz"
-      sha256 "1532f001671c4a8811032b692b5d77187560f2ee62ae2265ed004beecab29364"
+      url "https://github.com/ensigniasec/internal-run-mcp/releases/download/v#{version}/run-mcp_Darwin_arm64.tar.gz"
+      sha256 "ff85b0289d048ff2acdf250d9d3f8d5bfcef21f794cc749e7d6f64ded73ede48"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_x86_64.tar.gz"
-      sha256 "b900a0cbec836273231c0eed072e6c8c5111f672e7126520d08306fa14ae8f1b"
+      url "https://github.com/ensigniasec/internal-run-mcp/releases/download/v#{version}/run-mcp_Linux_x86_64.tar.gz"
+      sha256 "2029c31fe6adba4b2fb2dc4063e605bc37ac99930fa863a419500b298c99784b"
     end
     on_arm do
-      url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_arm64.tar.gz"
-      sha256 "c0fa8d1fcbe673759fd4b5db86a227cb2dcbddc3592759b9f1f2e749271d704d"
+      url "https://github.com/ensigniasec/internal-run-mcp/releases/download/v#{version}/run-mcp_Linux_arm64.tar.gz"
+      sha256 "28c8ab88eeb4b76aa7fa511d36900e487f27a51386b66297488b015bc97c606c"
     end
   end
 
   uninstall delete: [
       "~/.run-mcp/results.json",
       "~/.run-mcp",
+      "~/Library/Application Support/run-mcp",
+      "~/Library/Application Support/run-mcp/results.json",
+      "/Library/Application Support/run-mcp",
+      "/Library/Application Support/run-mcp/config.yaml",
     ]
 
   # No zap stanza required
