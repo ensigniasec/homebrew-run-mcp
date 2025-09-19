@@ -3,7 +3,7 @@ cask "run-mcp" do
   name "run-mcp"
   desc "A fast, portable, single-binary security scanner for the Model Context Protocol (MCP)."
   homepage "https://github.com/ensigniasec/run-mcp"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,23 @@ cask "run-mcp" do
 
   on_macos do
     on_intel do
-      url "https://github.com/ensigniasec/internal-run-mcp/releases/download/v#{version}/run-mcp_Darwin_x86_64.tar.gz"
-      sha256 "97af4f6498e185378170f31fdb1414d5b17710a48d1800ffe03fcd49b2787524"
+      url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_x86_64.tar.gz"
+      sha256 "2c756948e29b8b65a968036821a8e2389e0f0146a755a72522ee03475304cf82"
     end
     on_arm do
-      url "https://github.com/ensigniasec/internal-run-mcp/releases/download/v#{version}/run-mcp_Darwin_arm64.tar.gz"
-      sha256 "ff85b0289d048ff2acdf250d9d3f8d5bfcef21f794cc749e7d6f64ded73ede48"
+      url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_arm64.tar.gz"
+      sha256 "b71184eee9f8b3355ca02489758d5b551f3af41ca19fd81c8906b7f187e2073c"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/ensigniasec/internal-run-mcp/releases/download/v#{version}/run-mcp_Linux_x86_64.tar.gz"
-      sha256 "2029c31fe6adba4b2fb2dc4063e605bc37ac99930fa863a419500b298c99784b"
+      url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_x86_64.tar.gz"
+      sha256 "508e375ce08e59bff51b3f8026ef9f52d266b3608db31703ff4c9376278895df"
     end
     on_arm do
-      url "https://github.com/ensigniasec/internal-run-mcp/releases/download/v#{version}/run-mcp_Linux_arm64.tar.gz"
-      sha256 "28c8ab88eeb4b76aa7fa511d36900e487f27a51386b66297488b015bc97c606c"
+      url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_arm64.tar.gz"
+      sha256 "12c58570f242c050510ffe804d6489a01a8fde74c8bb968d2a4474668bbdf1fe"
     end
   end
 
