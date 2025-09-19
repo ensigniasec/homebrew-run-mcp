@@ -14,22 +14,22 @@ cask "run-mcp" do
   on_macos do
     on_intel do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_x86_64.tar.gz"
-      sha256 "c07eb951308120ae7340190f346de664cc499a3f89d12ec3f0e49b4525568328"
+      sha256 "290cab101009fe7702575961b00bb211cdf21453b2a84b68d84f1ce1c75e4fec"
     end
     on_arm do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_arm64.tar.gz"
-      sha256 "41efd7abe94dedee84677e88c7479596633849090a1a6dfa87cf35bba0f414a2"
+      sha256 "32d17517d2d60dbea3ba8c018c506e7211ea1a70ba572b15f6ceff3157d52aa5"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_x86_64.tar.gz"
-      sha256 "c5da61fae562bbf69f33fa83e05f1a5f352bd85bdb138e126211569b4fb7d1eb"
+      sha256 "486932a8a4eae4b69643eb7955d58412712eb9f77ea1fa9a78737ba945cc54fa"
     end
     on_arm do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_arm64.tar.gz"
-      sha256 "7f61102b29332662dec518c7580e27044cbe7fd31543892f2ec62fd108056974"
+      sha256 "9dcfb23d91b0e97a8d66f6970c13e5496c947a06fe0cbdcd645ba8b2835270f1"
     end
   end
 
