@@ -3,7 +3,7 @@ cask "run-mcp" do
   name "run-mcp"
   desc "A fast, portable, single-binary security scanner for the Model Context Protocol (MCP)."
   homepage "https://github.com/ensigniasec/run-mcp"
-  version "0.1.1"
+  version "0.1.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,23 +14,27 @@ cask "run-mcp" do
   on_macos do
     on_intel do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_x86_64.tar.gz"
-      sha256 "290cab101009fe7702575961b00bb211cdf21453b2a84b68d84f1ce1c75e4fec"
+      sha256 "b31444eb09a59a5384928483d35f27dd6c6025b92e38d039159e30cf1126f4f0"
     end
     on_arm do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_arm64.tar.gz"
-      sha256 "32d17517d2d60dbea3ba8c018c506e7211ea1a70ba572b15f6ceff3157d52aa5"
+      sha256 "2cfa13973e674cb0b445045a8ea56ffc23e8efdb25b515361a3cd4266ad71483"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_x86_64.tar.gz"
-      sha256 "486932a8a4eae4b69643eb7955d58412712eb9f77ea1fa9a78737ba945cc54fa"
+      sha256 "ac47ccd314c31edb1f12eaf5825dde62543b594107d7722bb1864238ac6b213c"
     end
     on_arm do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_arm64.tar.gz"
-      sha256 "9dcfb23d91b0e97a8d66f6970c13e5496c947a06fe0cbdcd645ba8b2835270f1"
+      sha256 "a30fde2ce648d2eb9fe79a2bd7f7e2fb08b901acd73714520ea2f0342faa2241"
     end
+  end
+
+  postflight do
+    system_command '/usr/bin/xattr', args: ['-dr', 'com.apple.quarantine', "#{staged_path}/run-mcp"], sudo: true
   end
 
   uninstall delete: [
@@ -38,8 +42,6 @@ cask "run-mcp" do
       "~/.run-mcp",
       "~/Library/Application Support/run-mcp",
       "~/Library/Application Support/run-mcp/results.json",
-      "/Library/Application Support/run-mcp",
-      "/Library/Application Support/run-mcp/config.yaml",
     ]
 
   # No zap stanza required
