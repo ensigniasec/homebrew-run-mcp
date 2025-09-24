@@ -3,7 +3,7 @@ cask "run-mcp" do
   name "run-mcp"
   desc "A fast, portable, single-binary security scanner for the Model Context Protocol (MCP)."
   homepage "https://github.com/ensigniasec/run-mcp"
-  version "0.1.5"
+  version "0.1.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "run-mcp" do
   on_macos do
     on_intel do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_x86_64.tar.gz"
-      sha256 "c77fca171769342f3642d19cf443dfc65c4cb3d520016468257ae5d6a8276d5b"
+      sha256 "700e4df9d2acea461bc0ad5d9dc8c658c8ca2500a92fe44ee443c6f5b5b0479a"
     end
     on_arm do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Darwin_arm64.tar.gz"
-      sha256 "a25a13025a014b7e1f1c5f79b9c6b9979a583a8e4a5450a630a884cb80a286aa"
+      sha256 "937a1daa2fb0606b0014813c973740606f5e016f382d0c9214d056a79403444e"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_x86_64.tar.gz"
-      sha256 "0793735d2f577e7fed8cf79505ef9cabd0056cf2e770d18694a1e50effb50f00"
+      sha256 "68d39589b1520c82dac58f005f354bdc9d7c9d43d8ca74af452a292227a39856"
     end
     on_arm do
       url "https://github.com/ensigniasec/run-mcp/releases/download/v#{version}/run-mcp_Linux_arm64.tar.gz"
-      sha256 "6f494948394290ba0ccbe38fa506dc78b4141f66a8cbe31a653ff9ce945859f1"
+      sha256 "9d1441ea9d792b605ca0954dc5de88f3f2d44ccbdd02587333f96ed0e03b384b"
     end
   end
 
